@@ -42,14 +42,46 @@ var javaskript = {
         b: null
     }],
     throwvar: function(){
-        this.temp.forEach(function(item,index){
-            javaskript.temp[index] = null;   
-        });
+        this.temp.a = null;
+        this.temp.b = null;
     },
     error: function (string) {
         console.log('JavaSkript Error: ' + string);
     }
 };
+//Preset Commands
+javaskript.add('alert', function (args) {
+    if (['alert the message ', 'alert a message ', 'alert message ', 'alert '].includes(args[0])) {
+        if ([' to the player', ''].includes(args[2])) {
+            alert(args[1]);
+        } else {
+            javaskript.error('Argument 3 is invalid');
+        }
+    } else {
+        javaskript.error('Argument 1 is invalid');
+    }
+});
+javaskript.add('log', function (args) {
+    if (['log the message ', 'log a message ', 'log message ', 'log '].includes(args[0])) {
+        if ([' to the console', ''].includes(args[2])) {
+            console.log(args[1]);
+        } else {
+            javaskript.error('Argument 3 is invalid');
+        }
+    } else {
+        javaskript.error('Argument 1 is invalid');
+    }
+});
+//Interperator
+document.getElementById('run')
+    .onclick = function () {
+        var javaskript_input = document.getElementById('input')
+            .value.split('\n');
+        javaskript_input.forEach(function (item) {
+            javaskript.run(item);
+        });
+    };
+
 //Preset Commands
 javaskript.add('alert', function (args) {
     if (['alert the message ', 'alert a message ', 'alert message ', 'alert '].includes(args[0])) {
