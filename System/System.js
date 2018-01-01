@@ -34,8 +34,9 @@ var javaskript = {
     }],
     throwvar: function(){
         this.temp.forEach(function(item,index){
-            javaskript.temp[index] = undefined;   
+            javaskript.temp[index] = null;   
         });
+        return [javaskript.temp.a, javaskript.temp.b]
     },
     error: function (string) {
         console.log('JavaSkript Error: ' + string);
