@@ -33,10 +33,8 @@ var javaskript = {
         b: null
     }],
     throwvar: function(){
-        this.temp.forEach(function(item,index){
-            javaskript.temp[index] = null;   
-        });
-        return [javaskript.temp.a, javaskript.temp.b]
+        this.temp.a = null;
+        this.temp.b = null;
     },
     error: function (string) {
         console.log('JavaSkript Error: ' + string);
