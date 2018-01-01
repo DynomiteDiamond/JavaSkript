@@ -13,6 +13,7 @@ var javaskript = {
         } else {
             this.error('Argument 2 is not a Function');
         }
+        this.throwvar();
     },
   	commands: [], 
   	run: function (string) {
@@ -25,10 +26,15 @@ var javaskript = {
         } else {
             this.error('No command found.');
         }
+        this.throwvar();
     },
   	temp: {
         a: null,
         b: null
+    },
+    throwvar: function(){
+        this.temp.a = undefined;
+        this.temp.b = undefined;
     },
     error: function (string) {
         console.log('JavaSkript Error: ' + string);
