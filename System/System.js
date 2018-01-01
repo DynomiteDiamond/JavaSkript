@@ -50,4 +50,3 @@ var javaskript = {
         reader.readAsText(file);
     }
 };
-};
