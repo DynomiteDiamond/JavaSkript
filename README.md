@@ -37,3 +37,8 @@ Needs:
 	else if condition
 	on event
 	Better Argument Seperation
+	.jsk File Reader
+	
+How to download -
+
+[Click Here!](https://www.cubemc.online/JavaSkript/javaskript.js "Cube JavaSkript")
