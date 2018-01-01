@@ -28,13 +28,14 @@ var javaskript = {
         }
         this.throwvar();
     },
-  	temp: {
+  	temp: [{
         a: null,
         b: null
-    },
+    }],
     throwvar: function(){
-        this.temp.a = undefined;
-        this.temp.b = undefined;
+        this.temp.forEach(function(item,index){
+            javaskript.temp[index] = undefined;   
+        });
     },
     error: function (string) {
         console.log('JavaSkript Error: ' + string);
