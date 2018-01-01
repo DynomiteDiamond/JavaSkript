@@ -1,6 +1,6 @@
-**WARNING**
+> **WARNING**
 
-***This is an unstable build, in Alpha 1.0.2***
+> ***This is an unstable build, in Alpha 1.0.2***
 
 Usage:
     
