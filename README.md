@@ -1,6 +1,5 @@
 > **WARNING**
-
-> ***This is an unstable build, in Alpha 1.0.2***
+***This is an unstable build, in Alpha 1.0.2***
 
 Usage:
     
@@ -37,8 +36,6 @@ Needs:
 	else if condition
 	on event
 	Better Argument Seperation
-	.jsk File Reader
 	
 How to download -
-
 [Click Here!](https://www.cubemc.online/JavaSkript/javaskript.js "Cube JavaSkript")
