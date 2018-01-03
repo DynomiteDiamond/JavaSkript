@@ -48,5 +48,12 @@ var javaskript = {
             }
         };
         reader.readAsText(file);
+    },
+    variables:[],
+    setvar: function(name,object){
+       this.variables[name] = object;
+    },
+    getvar: function(name){
+        return this.variables[name]   
     }
 };
