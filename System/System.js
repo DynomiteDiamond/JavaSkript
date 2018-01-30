@@ -55,5 +55,11 @@ var javaskript = {
     },
     getvar: function(name){
         return this.variables[name]   
+    },
+    delvar: function(name){
+        this.variables[name] = undefined;   
     }
 };
+function JavaSkriptEngine(){
+   this.engine = javaskript;
+}
