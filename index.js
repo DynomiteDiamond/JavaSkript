@@ -15,6 +15,14 @@ var javaskript = {
         }
         this.throwvar();
     },
+    addadvanced: function(string,func,replacer){
+        string = string.split('"');
+        string.forEach(function(item,index){
+           item.replace(new RegExp(replacer, 'g'), ' '); 
+           string[index] = item;
+        });
+        //In Development
+    },
   	commands: [], 
   	run: function (string) {
         string = string.split('"'); //Coming Soon - Better Breakdown of Strings
@@ -23,13 +31,13 @@ var javaskript = {
         if (this.temp.b !== undefined) {
             this.temp.b(string);
         } else {
-            this.error('No command found.');
+            this.error('Command Not Found.');
         }
         this.throwvar();
     },
     delete: function(command){
         if (this.commands[command] === undefined || this.commands[command] === null){
-            this.error("Command Doesn't Exist!")   
+            this.error("Command Doesn't Exist.")   
         } else {
             this.commands[command] = undefined;   
         }
