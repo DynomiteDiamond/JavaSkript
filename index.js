@@ -2,10 +2,10 @@ var javaskript = {
     add: function (name, func) {
         if (typeof func === 'function') {
             if (typeof name === 'string' || name instanceof String) {
-                if (javaskript.commands[name] !== undefined) {
+                if (this.commands[name] !== undefined) {
                     this.error('Command "' + name + '"Already Exists');
                 } else {
-                    javaskript.commands[name] = func;
+                    this.commands[name] = func;
                 }
             } else {
                 this.error('Argument 1 is not a String');
@@ -28,6 +28,13 @@ var javaskript = {
         }
         this.throwvar();
     },
+    delete: function(command){
+        if (this.commands[command] === undefined || this.commands[command] === null){
+            this.error("Command Doesn't Exist!")   
+        } else {
+            this.commands[command] = undefined;   
+        }
+    },
   	temp: [{
         a: null,
         b: null
@@ -44,7 +51,7 @@ var javaskript = {
         reader.onload = function(progressEvent){
             var lines = this.result.split('\n');
             for(var line = 0; line < lines.length; line++){
-                javaskript.run(lines[line]);
+                this.run(lines[line]);
             }
         };
         reader.readAsText(file);
@@ -57,7 +64,7 @@ var javaskript = {
         return this.variables[name]   
     },
     delvar: function(name){
-        this.variables[name] = undefined;   
+        this.variables[name] = undefined;  
     }
 };
 function JavaSkriptEngine(){
