@@ -63,3 +63,6 @@ var javaskript = {
 function JavaSkriptEngine(){
    this.engine = javaskript;
 }
+JavaSkriptEngine.prototype.update = function(system){
+    this.engine = system;   
+}
