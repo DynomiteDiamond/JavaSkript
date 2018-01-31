@@ -18,8 +18,7 @@ var javaskript = {
   	commands: [], 
   	run: function (string) {
         string = string.split('"'); //Coming Soon - Better Breakdown of Strings
-        this.temp.a = string[0].split(" ")
-            .shift();
+        this.temp.a = string[0].split(" ").shift();
         this.temp.b = this.commands[javaskript.temp.a];
         if (this.temp.b !== undefined) {
             this.temp.b(string);
