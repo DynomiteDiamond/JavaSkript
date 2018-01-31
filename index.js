@@ -3,7 +3,7 @@ var javaskript = {
         if (typeof func === 'function') {
             if (typeof name === 'string' || name instanceof String) {
                 if (this.commands[name] !== undefined) {
-                    this.error('Command "' + name + '"Already Exists');
+                    this.error('Command "' + name + '"Already Exists!');
                 } else {
                     this.commands[name] = func;
                 }
