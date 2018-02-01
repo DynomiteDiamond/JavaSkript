@@ -21,7 +21,12 @@ var javaskript = {
            item.replace(new RegExp(replacer, 'g'), ' '); 
            string[index] = item;
         });
-        //In Development
+        this.temp.a = str.slice(0, string.shift().split(" ").shift().length);
+        if (this.commands[this.temp.a] !== undefined || this.commands[this.temp.a] !== null) {
+            
+        } else {
+            this.error("Command Already Exists!")
+        }
     },
   	commands: [], 
   	run: function (string) {
