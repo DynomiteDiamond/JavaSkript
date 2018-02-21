@@ -1,42 +1,29 @@
-> **WARNING**
+# JavaSkript
 
-***This is an unstable build, in Alpha 1.0.2***
+A `Coding` Language combining [Skript](https://www.github.com/bensku/Skript) and [JavaScript](https://wikipedia.org/wiki/JavaScript)
 
-Usage:
-    
-    javaskript.create("alert", /*command name*/ function(args){
-    	alert(args[1])
-    } /*function runner*/
+Example:
 
-alert the command "Hey! This is a command!" to the website
+    alert the message "Hello User!" to the user
 
-More advanced measures can be taken, but this is all up to the developer.
+Benefits:
 
-Professional Example:
+ - You don't need to be able to code to write JavaSkript
+ - Developers can make custom commands, or edit present ones
+ - JavaSkript has its own storage
+ - Developers can make different instances of JavaSkript using `var (name) = new JavaSkriptEngine();`
 
-    javaskript.add('log', function (args) {
-    	if (['log the message ', 'log a message ', 'log message ', 'log '].includes(args[0])) {
-    		if ([' to the console', ''].includes(args[2])) {
-    			console.log(args[1]);
-    		} else {
-    			javaskript.error('Argument 3 is invalid');
-    		}
-    	} else {
-    		javaskript.error('Argument 1 is invalid');
-    	}
-    });
+Download: Use a stable build on [CubeMc Online](https://www.cubemc.online/JavaSkript/index.js) or use the experimental GitHub build.
+
+To Do:
+
+ - If statement
+ - Else statement
+ - Else if statement
+ - Advanced Command Maker
+	 - Simpler Functionality
+	 - Better Argument Seperator
+	 - NPM functionality using JavaSkriptEngine
 
 
 ----------
-
-
-Needs:
-
-	if condition
-	else
-	else if condition
-	on event
-	Better Argument Seperation
-	
-How to download -
-[Click Here!](https://www.cubemc.online/JavaSkript/javaskript.js "Cube JavaSkript")
