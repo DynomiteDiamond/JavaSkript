@@ -15,7 +15,7 @@ var javaskript = {
         }
         this.throwvar();
     },
-    addadvanced: function(string,func,replacer){
+    addAdvanced: function(string,func,replacer){ /*Not done*/
         string = string.split('"');
         string.forEach(function(item,index){
            item.replace(new RegExp(replacer, 'g'), ' '); 
@@ -30,7 +30,7 @@ var javaskript = {
     },
   	commands: [], 
   	run: function (string) {
-        string = string.split('"'); //Coming Soon - Better Breakdown of Strings
+        string = string.split('"'); /*Coming Soon - Better Breakdown of Strings*/
         this.temp.a = string[0].split(" ").shift();
         this.temp.b = this.commands[javaskript.temp.a];
         if (this.temp.b !== undefined) {
@@ -40,6 +40,15 @@ var javaskript = {
         }
         this.throwvar();
     },
+    runSolid: function(string,name){
+        this.temp.b = this.commands[name];
+        if (this.temp.b !== undefined) {
+            this.temp.b(string);
+        } else {
+            this.error('Command Not Found.');
+        }
+        this.throwvar();
+    }
     delete: function(command){
         if (this.commands[command] === undefined || this.commands[command] === null){
             this.error("Command Doesn't Exist.")   
