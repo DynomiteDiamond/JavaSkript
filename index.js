@@ -1,3 +1,4 @@
+//hi!
 var javaskript = {
     add: function (name, func) {
         if (typeof func === 'function') {
